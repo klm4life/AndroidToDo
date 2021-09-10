@@ -34,6 +34,15 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
+After finishing the implementation, I was unable to run the build since I kept getting an error concering more than one file being found 
+with OS independent path 'META-INF/LICENSE'. This was fixed by including 
+
+packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+    
+in my build.gradle (app) file.
+
 ## License
 
     Copyright [yyyy] [name of copyright owner]
